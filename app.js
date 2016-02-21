@@ -5,12 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./src/routes/index');
+var port = process.env.PORT || 5000;
+var nav = [{
+  Link: '/Login',
+  Text: 'Login'
+}];
+
+var routes = require('./src/routes/index')(nav);
 var users = require('./src/routes/users');
 
 var app = express();
 
-var port = process.env.PORT || 5000;
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'jade');
@@ -32,20 +37,6 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
 
 // production error handler
 // no stacktraces leaked to user
