@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+  each link in nav
+    li
+      a(href=link.Link) #{link.Text}
+  div
+    h3 Sign In
+  div
+    h3 Sign Up
+    form(name="signUpForm" action="/auth/signUp" method="post")
+      input(name="userName" id="useName")
+      input(name="password" id="password")
+      input(type="submit" value="Sign up")
