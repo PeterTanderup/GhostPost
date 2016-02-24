@@ -23,6 +23,7 @@ var routes = require('./src/routes/index')(nav);
 var login = require('./src/routes/login')(nav);
 var users = require('./src/routes/users');
 var auth = require('./src/routes/auth')(nav);
+var admin = require('./src/routes/admin')(nav);
 
 var app = express();
 
@@ -43,6 +44,7 @@ require('./src/config/passport')(app);
 app.use('/', routes);
 app.use('/login', login);
 app.use('/auth', auth);
+app.use('/admin', admin);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
