@@ -3,20 +3,10 @@
 
   function adminService($http) {
     var getUsers = function () {
-      return [
-        {
-          username: 'Peter',
-          name: 'Peter Tanderup'
-        },
-        {
-          username: 'Jesper',
-          name: 'Jesper Purup'
-        },
-        {
-          username: 'test',
-          name: 'test'
-        }
-      ];
+      return $http.get('/api/users')
+        .then(function (res) {
+          return res.data;
+        });
     };
 
     return {
