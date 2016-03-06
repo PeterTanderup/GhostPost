@@ -1,7 +1,15 @@
 doctype html
 html
-  head
+    head
     title= title
+    link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+  
+body
+    nav 
+        ul
+            each link in nav
+                li
+                a(href=link.Link) #{link.Text}
+    
     block content

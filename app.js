@@ -13,10 +13,10 @@ var nav = [
     Link: '/login',
     Text: 'Login'
   },
-  {
+  /*{
     Link: '/',
     Text: 'Home'
-  }
+  }*/
 ];
 
 var routes = require('./src/routes/index')(nav);
