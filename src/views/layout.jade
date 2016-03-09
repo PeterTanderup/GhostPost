@@ -1,7 +1,17 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    body  
+        nav
+            a(class="menu-bar" data-toggle="collapse" href="#menu")
+            span(class="bars")
+        
+            .collapse.menu#menu  
+                ul(class="list-inline")
+                    li: a(href="#") Admin
+                    
+        
+            
