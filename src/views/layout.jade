@@ -2,16 +2,31 @@ doctype html
 html
     head
         title= title
+        link(rel='stylesheet', href='/stylesheets/reset.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
     
     body  
         nav
-            a(class="menu-bar" data-toggle="collapse" href="#menu")
-            span(class="bars")
+            .dropdown
+                ul(class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown")
+                    li.dropdown-toggle: a(href="#") Admin
+                    ul.dropdown-menu
+                        li: a(href="#") Sign Up
+                        li: a(href="#") Sign In
+        hr
         
-            .collapse.menu#menu  
-                ul(class="list-inline")
-                    li: a(href="#") Admin
+        
+        
+        
+        
+ //
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+
                     
         
             
