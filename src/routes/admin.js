@@ -4,7 +4,7 @@ var adminRouter = express.Router();
 var router = function (nav) {
   adminRouter.route('/')
     .get(function(req, res, next) {
-      res.render('../../public/app/index');
+      res.render('app/index');
     });
   return adminRouter;
 };
