@@ -1,30 +1,34 @@
 <!doctype html>
 <html lang="en" ng-app="admin">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Admin</title>
-    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/app.css"/>
-  </head>
-  <body>
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
     <div class="container">
-      <div ng-controller="adminController">
-        Hello from Angular
-        <table class="table table-bordered">
-          <head>
-            <tr>
-              <td>Username</td>
-              <td>Password</td>
-            </tr>
-          </head>
-          <body>
-            <tr ng-repeat="user in users">
-              <td>{{user.username}}</td>
-              <td>{{user.password}}</td>
-            </tr>
-          </body>
-        </table>
-      </div>
+        <div ng-controller="adminController">
+            Hello from Angular
+            <table class="table table-bordered">
+
+                <head>
+                    <tr>
+                        <td>Username</td>
+                        <td>Password</td>
+                    </tr>
+                </head>
+
+                <body>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.username}}</td>
+                        <td>{{user.password}}</td>
+                    </tr>
+                </body>
+            </table>
+        </div>
     </div>
     <script src="../lib/jquery/dist/jquery.min.js"></script>
     <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -32,5 +36,6 @@
     <script src="admin/admin.module.js"></script>
     <script src="admin/admin.controller.js"></script>
     <script src="admin/admin.service.js"></script>
-  </body>
+</body>
+
 </html>

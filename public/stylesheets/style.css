@@ -1,6 +1,30 @@
+/*-------------------------------*/
+/* Layout */
+/*-------------------------------*/
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+footer {
+    height:50px;
+    width: 100%;
+    position: absolute;
+    bottom:0;
+}
+
+/*-------------------------------*/
+/* Navigation */
+/*-------------------------------*/
+nav {
+    height:50px;
+    border:1px solid blue;
+}
+
+/*-------------------------------*/
+/* Typography */
+/*-------------------------------*/
+footer p {
+    text-align: center;
 }
 
 a {
