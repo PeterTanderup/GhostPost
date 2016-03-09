@@ -16,13 +16,15 @@ var nav = [
   {
     Link: '/',
     Text: 'Home'
+  },{
+    Link: '/app',
+    Text: 'Admin'
   }
 ];
 
 var routes = require('./src/routes/index')(nav);
 var login = require('./src/routes/login')(nav);
 var auth = require('./src/routes/auth')(nav);
-// var admin = require('./src/routes/admin')(nav);
 var api = require('./src/routes/api')(nav);
 
 var app = express();
@@ -35,6 +37,7 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public/app')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
@@ -44,7 +47,6 @@ require('./src/config/passport')(app);
 app.use('/', routes);
 app.use('/login', login);
 app.use('/auth', auth);
-// app.use('/admin', admin);
 app.use('/api', api);
 
 // catch 404 and forward to error handler
