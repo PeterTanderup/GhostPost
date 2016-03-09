@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
-
+require('./src/models/db');
 var port = process.env.PORT || 5000;
 var nav = [
   {
