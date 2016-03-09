@@ -1,0 +1,12 @@
+extends layout2
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a.menu-bar(data-toggle="collapse" href="#menu")
+    span.bars
+  div#menu.collapse.menu
+    ul.list-inline
+      each link in nav
+        li
+          a(href=link.Link) #{link.Text}
