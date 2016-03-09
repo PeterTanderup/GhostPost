@@ -2,8 +2,14 @@
 /* Layout */
 /*-------------------------------*/
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 0 50px;
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+header {
+    height:50px;
+}
+.container {
+    height:1000px;
 }
 footer {
     height:50px;
@@ -11,13 +17,42 @@ footer {
     position: absolute;
     bottom:0;
 }
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 /*-------------------------------*/
 /* Navigation */
 /*-------------------------------*/
-nav {
-    height:50px;
-    border:1px solid blue;
+.menu-bar {
+    position: absolute;
+    top: 20px;    
+    left: 50%;
+    height: 14px;
+    margin-left: -10px;
+}
+.menu {
+    display: none; 
+    width: 100%;
+    padding: 30px 10px 50px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+}
+.menu ul {
+    margin-bottom: 0;
+}
+.menu a {
+    color: #333; 
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.menu a:hover {
+    text-decoration: none;
+    opacity: 1;
 }
 
 /*-------------------------------*/

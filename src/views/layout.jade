@@ -1,17 +1,39 @@
 doctype html
 html
-    head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
+ head
+ title= title
+ link(rel='stylesheet', href='stylesheets/reset.css')
+ link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+ link(rel='stylesheet', href='/stylesheets/style.css')
+
+ body
+  header
+   nav
+    a.menu-bar(data-toggle="collapse" href="#menu") Admin
+     div#menu.collapse.menu
+      ul.list-inline
+       li  
+         //-a(href="#") Sign In
+         div
+          h3 Sign In
+          form(name="signInForm" action="/auth/signIn" method="post")
+          | User Name: 
+          input(name="userName" id="useName")
+          br
+          | Password: 
+          input(name="password" id="password")
+          br
+          input(type="submit" value="Sign in")
+  hr          
+  
+  block content
+  hr
     
-    body  
-        nav
-            a(class="menu-bar" data-toggle="collapse" href="#menu")
-            span(class="bars")
-        
-            .collapse.menu#menu  
-                ul(class="list-inline")
-                    li: a(href="#") Admin
-                    
-        
+  footer
+   .row
+    .col-xs-12
+     small &copy; Jesper Purup, Martin Damm & Peter Tanderup
+    
+script(src='/lib/jquery/dist/jquery.min.js')
+script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
             
