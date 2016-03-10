@@ -8,6 +8,8 @@ var sendJsonResponse = function (res, status, content) {
   res.json(content);
 };
 // need to trap errors
+// done for /users
+
 // sequrity ?
 
 var router = function (nav) {

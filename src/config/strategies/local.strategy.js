@@ -1,6 +1,11 @@
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    mongodb = require('mongodb').MongoClient;
+    mongoose = require('mongoose'),
+    User = mongoose.model('User'),
+    sendJsonResponse = function (res, status, content) {
+      res.status(status);
+      res.json(content);
+    };
 
 module.exports = function () {
   passport.use(new LocalStrategy({
@@ -8,19 +13,23 @@ module.exports = function () {
     passwordField: 'password'
   },
   function (username, password, done) {
-    // need to implement mongoose and need to handle if the user is
-    // all ready in the database
-    var url = 'mongodb://localhost:27017/ghostpost';
-    mongodb.connect(url, function (err, db) {
-      var collection = db.collection('users');
-      collection.findOne({username: username}, function (err, results) {
-        if (results.password === password) {
-          var user = results;
-          done(null, user);
-        } else {
+    User
+      .findOne({userName: username}, function (err, user) {
+        if (!user) {
+          done(null, false, {message: 'user not found'});
+          return;
+        }
+        else if (err) {
+          done(null, false, err);
+          return;
+        }
+        if (user.password === password) {
+          var usert = user;
+          done(null, usert);
+        }
+        else {
           done(null, false, {message: 'Bad password'});
         }
       });
-    });
   }));
 };

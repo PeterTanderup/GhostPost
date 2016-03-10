@@ -1,26 +1,34 @@
 var express = require('express');
 var authRouter = express.Router();
-var mongodb = require('mongodb').MongoClient;
 var passport = require('passport');
+var mongoose = require('mongoose');
+var User = mongoose.model('User');
+var sendJsonResponse = function (res, status, content) {
+  res.status(status);
+  res.json(content);
+};
 
 var router = function () {
   authRouter.route('/signUp')
     .post(function (req, res) {
       console.log(req.body);
-      // need to implement mongoose and need to handle if the user is
-      // all ready in the database
-      var url = 'mongodb://localhost:27017/ghostpost';
-      mongodb.connect(url, function (err, db) {
-        var collection = db.collection('users');
-        var user = {
-          username: req.body.userName,
-          password: req.body.password
-        };
-        collection.insert(user, function (err, results) {
-          req.login(results.ops[0], function() {
+      User.create({
+        userName: req.body.userName,
+        email: req.body.email,
+        password: req.body.password,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        role: req.body.role
+      }, function (err, user) {
+        if (err) {
+          sendJsonResponse(res, 400, err);
+        }
+        else {
+          //sendJsonResponse(res, 201, user);
+          req.login(user, function () {
             res.redirect('/auth/profile');
           });
-        });
+        }
       });
     });
   authRouter.route('/signIn')
