@@ -14,83 +14,67 @@ html
  
  body
   header
+   .container  
+    .navbar.navbar-default.navbar-fixed-top
+     .container
+      .navbar-header
+       button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-main')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+       a.navbar-brand(href='/') Ghost Post
+      #navbar-main.navbar-collapse.collapse
+       ul.nav.navbar-nav
+        //-li: a(href='#' type="button" data-toggle="modal") Login
+      
+        // Button triggers the modal
+        button#mybtn.btn.btn-default.btn-md(type="button" data-toggle="modal" data-target="#myModal" data-backdrop="true") Login
+        // Modal
+        #myModal(class="modal fade" role="dialog")
+         .modal-dialog
+       
+          // Modal content
+          .modal-content
+           //.modal-header(style="padding:35px 50px;")
+           .modal-header
+            button.close(type="button" data-dismiss="modal")&times;
+            h4 
+             span.glyphicon.glyphicon-lock Login
+           .modal-body(style="padding:40px 50px;")
+            form(role="form")
+             .form-group
+              label(for="usrname")
+               span.glyphicon.glyphicon-user Username
+              input#usrname.form-control(type="text" placeholder="Enter username")
+             .form-group
+              label(for="psw")
+               span.glyphicon.glyphicon-eye-open Password
+              input#psw.form-control(type="text" placeholder="Enter password")
+             .checkbox
+              label Remember me 
+               input(type="checkbox" value="" checked) 
+              button.btn.btn-success.btn-block(type="submit")
+               span.glyphicon.glyphicon-off Login
+           .modal-footer
+            button.btn.btn-danger.btn.default.pull-left(type="button" data-dismiss="modal")
+             span.glyphicon.glyphicon-remove Cancel
+             p Not a member?
+              a(href="#") Sign Up
+             p Forgot
+              a(href="#") password?
   
-  .navbar.navbar-default.navbar-fixed-top
-   .container
-    .navbar-header
-     button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-main')
-       span.icon-bar
-       span.icon-bar
-       span.icon-bar
-     a.navbar-brand(href='/') Ghost Post
-    #navbar-main.navbar-collapse.collapse
-     ul.nav.navbar-nav
-      //-li: a(href='#' type="button" data-toggle="modal") Login
-      
-      // Button triggers the modal
-      button#mybtn.btn.btn-default.btn-md(type="button" data-toggle="modal" data-target="#myModal") Login
-      // Modal
-      #myModal(class="modal fade" role="dialog")
-       .modal-dialog
-       
-        // Modal content
-        .modal-content
-         .modal-header(style="padding:35px 50px;")
-          button.close(type="button" data-dismiss="modal")&times;
-          h4: span.glyphicon.glyphicon-lock Login
-         .modal-body(style="padding:40px 50px;")
-          form(role="form")
-           .form-group
-            label(for="usrname"): span.glyphicon.glyphicon-user Username
-            input#usrname.form-control(type="text" placeholder="Enter username")
-           .form-group
-            label(for="psw"): span.glyphicon.glyphicon-eye-open Password
-            input#psw.form-control(type="text" placeholder="Enter password")
-           .checkbox
-            label Remember me 
-             input(type="checkbox" value="" checked) 
-            button.btn.btn-success.btn-block(type="submit"): span.glyphicon.glyphicon-off Login
-         .modal-footer
-          button.btn.btn-danger.btn.default.pull-left(type="button" data-dismiss="modal"): span.glyphicon.glyphicon-remove Cancel
-           p Not a member?
-            a(href="#") Sign Up
-           p Forgot
-            a(href="#") password?
-            
-            
-            
-            
-              
-            
-            
-       
-        
-      
-      
-      
-      //button.btn.btn-info(type="button" data-toggle="modal" data-target="#myModal") Login
-      //#myModal(class="modal fade" role="dialog")
-       .modal-dialog
-        .modal-content
-         .modal-header
-          button.close(type="button" data-dismiss="modal")&times;
-          h4.modal-title Modal header
-         .modal-body
-          p Some text in the modal
-         .modal-footer
-          button.btn.btn-default(type="button" data-dismiss="modal") Close
-          
-          
-  block content
-  hr
+  //- Application content
+  .container                  
+   block content
     
   footer
-   .row
-    .col-xs-12
-     small &copy; Jesper Purup, Martin Damm & Peter Tanderup
-    
-script(src='/lib/jquery/dist/jquery.min.js')
-script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
-script(src='scripts/script.js' type='text/javascript')
-
-            
+   .container
+    .row
+     .col-xs-12
+      small &copy; Jesper Purup, Martin Damm & Peter Tanderup
+      
+  script(src='/lib/jquery/dist/jquery.min.js')
+  script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+  script(src='scripts/script.js') 
+  script(src="http://code.jquery.com/jquery-1.11.1.min.js")
+  script(src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")

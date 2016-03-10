@@ -2,14 +2,17 @@
 /* Layout */
 /*-------------------------------*/
 body {
-    padding: 50px;
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+header {
+    height: 50px;
 }
 footer {
     height:50px;
     width: 100%;
     position: absolute;
     bottom:0;
+    background-color:cornflowerblue;
 }
 hr {
     border: 0;
@@ -31,13 +34,13 @@ hr {
 .modal-footer {
     background-color: #f9f9f9;
 }
+.modal-content {
+    background-color:wheat;
+}
 
 /*-------------------------------*/
 /* Typography */
 /*-------------------------------*/
-footer p {
-    text-align: center;
-}
 
 a {
   color: #00B7FF;
