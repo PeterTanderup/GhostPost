@@ -47,9 +47,15 @@ html
             label(for="psw"): span.glyphicon.glyphicon-eye-open Password
             input#psw.form-control(type="text" placeholder="Enter password")
            .checkbox
-            label: input(type="checkbox" value="" checked) Remember me
+            label Remember me 
+             input(type="checkbox" value="" checked) 
             button.btn.btn-success.btn-block(type="submit"): span.glyphicon.glyphicon-off Login
-         
+         .modal-footer
+          button.btn.btn-danger.btn.default.pull-left(type="button" data-dismiss="modal"): span.glyphicon.glyphicon-remove Cancel
+           p Not a member?
+            a(href="#") Sign Up
+           p Forgot
+            a(href="#") password?
             
             
             
@@ -57,12 +63,8 @@ html
               
             
             
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="#">Sign Up</a></p>
-          <p>Forgot <a href="#">Password?</a></p>
-        </div>
-      </div>
+       
+        
       
       
       
