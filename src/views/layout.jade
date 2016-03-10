@@ -11,38 +11,74 @@ html
  link(rel='stylesheet', href='/lib/normalize-css/normalize.css')
  link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
  link(rel='stylesheet', href='/stylesheets/style.css')
-
+ 
  body
   header
-   nav
-    a.menu-bar(data-toggle="collapse" href="#menu") Admin
-     div#menu.collapse.menu
-      ul.list-inline
-       li  
-         //-a(href="#") Sign In
-         #login.row.col-xs-18
-          .col-xs-12.signIn
-           strong Sign In
-           form(name="signInForm" action="/auth/signIn" method="post")
-           | User Name: 
-           input(name="userName" id="useName")
-           br
-           | Password: 
-           input(name="password" id="password")
-           br
-           input(type="submit" value="Sign in")
-          .col-xs-12.signUp
-           strong Sign Up
-           form(name="signUpForm" action="/auth/signUp" method="post")
-           | User Name: 
-           input(name="userName" id="useName")
-           br
-           | Password: 
-           input(name="password" id="password")
-           br
-           input(type="submit" value="Sign up")
-  hr          
   
+  .navbar.navbar-default.navbar-fixed-top
+   .container
+    .navbar-header
+     button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-main')
+       span.icon-bar
+       span.icon-bar
+       span.icon-bar
+     a.navbar-brand(href='/') Ghost Post
+    #navbar-main.navbar-collapse.collapse
+     ul.nav.navbar-nav
+      //-li: a(href='#' type="button" data-toggle="modal") Login
+      
+      // Button triggers the modal
+      button#mybtn.btn.btn-default.btn-md(type="button" data-toggle="modal" data-target="#myModal") Login
+      // Modal
+      #myModal(class="modal fade" role="dialog")
+       .modal-dialog
+       
+        // Modal content
+        .modal-content
+         .modal-header(style="padding:35px 50px;")
+          button.close(type="button" data-dismiss="modal")&times;
+          h4: span.glyphicon.glyphicon-lock Login
+         .modal-body(style="padding:40px 50px;")
+          form(role="form")
+           .form-group
+            label(for="usrname"): span.glyphicon.glyphicon-user Username
+            input#usrname.form-control(type="text" placeholder="Enter username")
+           .form-group
+            label(for="psw"): span.glyphicon.glyphicon-eye-open Password
+            input#psw.form-control(type="text" placeholder="Enter password")
+           .checkbox
+            label: input(type="checkbox" value="" checked) Remember me
+            button.btn.btn-success.btn-block(type="submit"): span.glyphicon.glyphicon-off Login
+         
+            
+            
+            
+            
+              
+            
+            
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+      
+      
+      
+      //button.btn.btn-info(type="button" data-toggle="modal" data-target="#myModal") Login
+      //#myModal(class="modal fade" role="dialog")
+       .modal-dialog
+        .modal-content
+         .modal-header
+          button.close(type="button" data-dismiss="modal")&times;
+          h4.modal-title Modal header
+         .modal-body
+          p Some text in the modal
+         .modal-footer
+          button.btn.btn-default(type="button" data-dismiss="modal") Close
+          
+          
   block content
   hr
     
@@ -53,4 +89,6 @@ html
     
 script(src='/lib/jquery/dist/jquery.min.js')
 script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+script(src='scripts/script.js' type='text/javascript')
+
             

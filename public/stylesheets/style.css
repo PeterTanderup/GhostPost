@@ -2,14 +2,8 @@
 /* Layout */
 /*-------------------------------*/
 body {
-    padding: 0 50px;
+    padding: 50px;
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-header {
-    height:50px;
-}
-.container {
-    height:1000px;
 }
 footer {
     height:50px;
@@ -24,40 +18,18 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+
 /*-------------------------------*/
 /* Admin sign up/sign in */
 /*-------------------------------*/
-.menu-bar {
-    position: relative;
-    top:20px;
-    height: 14px;
-    float:right;
-    z-index:1;
+.modal-header, h4, .close {
+    background-color: #5c85c;
+    color: white !important;
+    text-align: center;
+    font-size: 30px;
 }
-.menu {
-    display: none; 
-    padding: 30px 10px 50px;
-    margin: 0 auto;
-    background-color: #fff;
-}
-.menu ul {
-    margin-bottom: 0;
-}
-.menu a {
-    color: #333; 
-    text-transform: uppercase;
-    opacity: 0.8;
-}
-.menu a:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-#login {
-    float:right;
-}
-.signIn, .signUp {
-    float:left;
-    border:1px solid red;
+.modal-footer {
+    background-color: #f9f9f9;
 }
 
 /*-------------------------------*/
