@@ -12,7 +12,7 @@ html
  link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
  link(rel='stylesheet', href='/stylesheets/style.css')
  
- body
+ body            
   header
    .container  
     .navbar.navbar-default.navbar-fixed-top
@@ -25,46 +25,11 @@ html
        a.navbar-brand(href='/') Ghost Post
       #navbar-main.navbar-collapse.collapse
        ul.nav.navbar-nav
-        //-li: a(href='#' type="button" data-toggle="modal") Login
-      
-        // Button triggers the modal
-        button#mybtn.btn.btn-default.btn-md(type="button" data-toggle="modal" data-target="#myModal" data-backdrop="true") Login
-        // Modal
-        #myModal(class="modal fade" role="dialog")
-         .modal-dialog
        
-          // Modal content
-          .modal-content
-           //.modal-header(style="padding:35px 50px;")
-           .modal-header
-            button.close(type="button" data-dismiss="modal")&times;
-            h4 
-             span.glyphicon.glyphicon-lock Login
-           .modal-body(style="padding:40px 50px;")
-            form(role="form")
-             .form-group
-              label(for="usrname")
-               span.glyphicon.glyphicon-user Username
-              input#usrname.form-control(type="text" placeholder="Enter username")
-             .form-group
-              label(for="psw")
-               span.glyphicon.glyphicon-eye-open Password
-              input#psw.form-control(type="text" placeholder="Enter password")
-             .checkbox
-              label Remember me 
-               input(type="checkbox" value="" checked) 
-              button.btn.btn-success.btn-block(type="submit")
-               span.glyphicon.glyphicon-off Login
-           .modal-footer
-            button.btn.btn-danger.btn.default.pull-left(type="button" data-dismiss="modal")
-             span.glyphicon.glyphicon-remove Cancel
-             p Not a member?
-              a(href="#") Sign Up
-             p Forgot
-              a(href="#") password?
-  
+       // Modal formen er flyttet til Layout2 filen.
+        
   //- Application content
-  .container                  
+  .container    
    block content
     
   footer

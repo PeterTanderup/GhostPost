@@ -30,12 +30,18 @@ hr {
     color: white !important;
     text-align: center;
     font-size: 30px;
+    z-index:999;
 }
 .modal-footer {
     background-color: #f9f9f9;
+    z-index:999;
 }
 .modal-content {
     background-color:wheat;
+    z-index:999;
+}
+.modal fade in {
+    z-index:999;
 }
 
 /*-------------------------------*/
