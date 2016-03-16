@@ -25,6 +25,7 @@ hr {
 /*-------------------------------*/
 /* Admin sign up/sign in */
 /*-------------------------------*/
+/*
 .modal-header, h4, .close {
     background-color: #5c85c;
     color: white !important;
@@ -43,7 +44,7 @@ hr {
 .modal fade in {
     z-index:999;
 }
-
+*/
 /*-------------------------------*/
 /* Typography */
 /*-------------------------------*/

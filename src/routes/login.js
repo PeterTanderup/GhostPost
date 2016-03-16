@@ -4,7 +4,7 @@ var loginRouter = express.Router();
 var router = function (nav) {
   loginRouter.route('/')
     .get(function(req, res, next) {
-      res.render('login', {
+      res.render('modal', {
         title: 'Login to GhostPost',
         nav: nav
     });
