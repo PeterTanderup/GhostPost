@@ -3,6 +3,7 @@
 /*-------------------------------*/
 body {
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding-bottom: 70px;
 }
 header {
     height: 50px;
@@ -122,6 +123,14 @@ hr {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
+
+/*-------------------------------*/
+/* Content on Index */
+/*-------------------------------*/
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
 
 /*-------------------------------*/
 /* Typography */
