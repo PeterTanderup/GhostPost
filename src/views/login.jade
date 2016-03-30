@@ -2,23 +2,52 @@ extends layout
 
 block content
 
-    div
-    h3 Sign In
-        form(name="signInForm" action="/auth/signIn" method="post")
-          | User Name: 
-          input(name="userName" id="useName")
-          br
-          | Password: 
-          input(name="password" id="password")
-          br
-          input(type="submit" value="Sign in")
-    div
-    h3 Sign Up
-        form(name="signUpForm" action="/auth/signUp" method="post")
-          | User Name: 
-          input(name="userName" id="useName")
-          br
-          | Password: 
-          input(name="password" id="password")
-          br
-          input(type="submit" value="Sign up")
+ // Login and register form
+ .container
+  .row
+    .col-md-6.col-md-offset-3
+      .panel.panel-login
+        .panel-heading
+          .row
+            .col-xs-6
+              a#login-form-link.active(href='#') Login
+            .col-xs-6
+              a#register-form-link(href='#') Register
+          hr
+        .panel-body
+          .row
+            .col-lg-12
+              form#login-form(name="signInForm" action='/auth/signIn', method='post', role='', style='display: block;')
+                .form-group
+                  input#username.form-control(type='text', name='userName', tabindex='1', placeholder='Username', value='')
+                .form-group
+                  input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+                .form-group.text-center
+                  input#remember(type='checkbox', tabindex='3', name='remember')
+                  label(for='remember')  Remember Me
+                .form-group
+                  .row
+                    .col-sm-6.col-sm-offset-3
+                      input#login-submit.form-control.btn.btn-login(type='submit', name='login-submit', tabindex='4', value='Log In')
+                .form-group
+                  .row
+                    .col-lg-12
+                      .text-center
+                        a.forgot-password(href='#', tabindex='5') Forgot Password?
+              form#register-form(name="signUpForm" action='/auth/signUp', method='post', role='form', style='display: none;')
+                .form-group
+                  input#firstName.form-control(type='text', name='firstName', tabindex='1', placeholder='First name', value='')
+                .form-group
+                  input#lastName.form-control(type='text', name='lastName', tabindex='2', placeholder='Last name', value='')
+                .form-group
+                  input#userName.form-control(type='text', name='userName', tabindex='3', placeholder='Username', value='')
+                .form-group
+                  input#email.form-control(type='email', name='email', tabindex='4', placeholder='Your email', value='')
+                .form-group
+                  input#password.form-control(type='password', name='password', tabindex='5', placeholder='Password')
+                .form-group
+                  input#confirm-password.form-control(type='password', name='confirm-password', tabindex='5', placeholder='Confirm Password')
+                .form-group
+                  .row
+                    .col-sm-6.col-sm-offset-3
+                      input#register-submit.form-control.btn.btn-register(type='submit', name='register-submit', tabindex='4', value='Register Now')

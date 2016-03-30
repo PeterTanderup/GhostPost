@@ -19,7 +19,7 @@ var router = function () {
         password: req.body.password,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        role: req.body.role
+        role: 'user'
       }, function (err, user) {
         if (err) {
           sendJsonResponse(res, 400, err);
