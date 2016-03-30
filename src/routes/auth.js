@@ -11,6 +11,7 @@ var sendJsonResponse = function (res, status, content) {
 var router = function () {
   authRouter.route('/signUp')
     .post(function (req, res) {
+      // need to check if user allresdy exists
       console.log(req.body);
       User.create({
         userName: req.body.userName,
