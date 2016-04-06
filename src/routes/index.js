@@ -7,8 +7,8 @@ var router = function (nav) {
       res.render('index', {
         title: 'GhostPost',
         nav: nav
+      });
     });
-  });
   return indexRouter;
 };
 
