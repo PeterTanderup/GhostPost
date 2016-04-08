@@ -26,6 +26,7 @@ var routes = require('./src/routes/index')(nav);
 var login = require('./src/routes/login')(nav);
 var auth = require('./src/routes/auth')(nav);
 var api = require('./src/routes/api')(nav);
+var backend = require('./src/routes/backend')(nav);
 
 var app = express();
 
@@ -48,9 +49,7 @@ app.use('/', routes);
 app.use('/login', login);
 app.use('/auth', auth);
 app.use('/api', api);
-app.get('/backend', function (req, res) {
-  res.sendFile(path.join(__dirname, '/public/app', 'index.html'));
-});
+app.get('/backend', backend);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

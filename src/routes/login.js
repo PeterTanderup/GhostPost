@@ -7,8 +7,8 @@ var router = function (nav) {
       res.render('login', {
         title: 'Login to GhostPost',
         nav: nav
+      });
     });
-  });
   return loginRouter;
 };
 
