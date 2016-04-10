@@ -3,8 +3,19 @@ extends layout
 block link
   link(rel='stylesheet', href='/app/css/app.css')
 block content
-  .container(ng-app='admin')
-    div(ng-view)
+  .container(ng-app='backend')
+    .row
+      .col-xs-3
+        ul.nav.nav-pills.nav-stacked
+          each link in navSide
+            li(role='presentation')
+              a(href=link.Link) #{link.Text}
+      .col-xs-9
+        div(ng-view)
 block script
   script(src='/lib/angular/angular.js')
-  script(src='')
+  script(src='/lib/angular-route/angular-route.js')
+  script(src='/app/backend.js')
+  script(src='/app/home/home.controller.js')
+  script(src='/app/users/users.service.js')
+  script(src='/app/users/users.controller.js')

@@ -1,7 +1,10 @@
 (function () {
   'use strict';
+  angular
+    .module('backend')
+    .factory('usersService', usersService);
 
-  function adminService($http) {
+  function usersService($http) {
     var getUsers = function () {
       return $http.get('/api/users')
         .then(function (res) {
@@ -13,6 +16,4 @@
       getUsers: getUsers
     };
   }
-
-  angular.module('admin').factory('adminService', adminService);
 })();

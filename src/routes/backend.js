@@ -1,6 +1,15 @@
 var express = require('express');
 var path = require('path');
 var backendRouter = express.Router();
+var navSide = [
+  {
+    Link: '#/',
+    Text: 'Home'
+  },{
+    Link: '#/users',
+    Text: 'Users'
+  }
+];
 
 var router = function (nav) {
   backendRouter.route('*')
@@ -15,7 +24,8 @@ var router = function (nav) {
         });
       }
       res.render('backend',{
-        nav: nav
+        nav: nav,
+        navSide: navSide
       });
       //res.sendFile(path.join(__dirname, '../../public/app', 'index.html'));
     });
