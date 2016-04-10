@@ -1,0 +1,10 @@
+extends layout
+
+block link
+  link(rel='stylesheet', href='/app/css/app.css')
+block content
+  .container(ng-app='admin')
+    div(ng-view)
+block script
+  script(src='/lib/angular/angular.js')
+  script(src='')

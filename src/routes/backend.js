@@ -5,7 +5,19 @@ var backendRouter = express.Router();
 var router = function (nav) {
   backendRouter.route('*')
     .get(function(req, res, next) {
-      res.sendFile(path.join(__dirname, '../../public/app', 'index.html'));
+      if (!req.user) {
+        var err = new Error('You need to be loged in');
+        err.status = 401;
+        res.render('error', {
+          message: err.message,
+          error: err,
+          nav: nav
+        });
+      }
+      res.render('backend',{
+        nav: nav
+      });
+      //res.sendFile(path.join(__dirname, '../../public/app', 'index.html'));
     });
   return backendRouter;
 };
