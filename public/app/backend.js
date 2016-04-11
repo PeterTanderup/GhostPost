@@ -1,5 +1,5 @@
 (function () {
-  angular.module('backend', ['ngRoute']);
+  angular.module('backend', ['ngResource','ngRoute']);
 
   config.$inject = ['$routeProvider'];
   function config ($routeProvider) {

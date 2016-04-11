@@ -4,12 +4,17 @@
     .module('backend')
     .factory('usersService', usersService);
 
-  function usersService($http) {
+  function usersService($http, $resource) {
+    var user = $resource('/api/users/:id', {id: '@_id'});
+
+//    var getUsers = function () {
+//      return $http.get('/api/users')
+//        .then(function (res) {
+//          return res.data;
+//        });
+//    };
     var getUsers = function () {
-      return $http.get('/api/users')
-        .then(function (res) {
-          return res.data;
-        });
+      return user.query().$promise;
     };
 
     return {
