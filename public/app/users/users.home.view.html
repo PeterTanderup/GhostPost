@@ -1,14 +1,14 @@
 <h2>{{vm.message}}</h2>
+<p><button class="btn btn-primary" ng-click="vm.addUser()">Add user</button></p>
 <table class="table table-bordered">
 
     <head>
         <tr>
           <td>Username</td>
           <td>E-mail</td>
-          <td>Password</td>
-          <td>First name</td>
-          <td>Last name</td>
           <td>role</td>
+          <td></td>
+          <td></td>
         </tr>
     </head>
 
@@ -16,10 +16,9 @@
         <tr ng-repeat="user in vm.users">
           <td>{{user.userName}}</td>
           <td>{{user.email}}</td>
-          <td>{{user.password}}</td>
-          <td>{{user.firstName}}</td>
-          <td>{{user.lastName}}</td>
           <td>{{user.role}}</td>
+          <td><button class="btn btn-success" ng-click="vm.editUser(user._id)">Edit user</button></td>
+          <td><button class="btn btn-danger" ng-click="vm.deleteUser(user._id)">Delete user</button></td>
         </tr>
     </body>
 </table>

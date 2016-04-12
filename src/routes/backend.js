@@ -15,7 +15,7 @@ var router = function (nav) {
   backendRouter.route('*')
     .get(function(req, res, next) {
       if (!req.user) {
-        var err = new Error('You need to be loged in');
+        var err = new Error('You need to be logged in');
         err.status = 401;
         res.render('error', {
           message: err.message,

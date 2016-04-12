@@ -1,0 +1,50 @@
+<h2>{{vm.message}}</h2>
+<h3 class="text-danger">{{vm.error}}</h3>
+<div class="row">
+  <form class="col-xs-8">
+    <div class="form-group row">
+      <label for="userName" class="col-xs-3 form-control-label">Username</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="userName" ng-model="vm.user.userName" placeholder="Username">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="email" class="col-xs-3 form-control-label">Email</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="email" ng-model="vm.user.email" placeholder="email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-xs-3 form-control-label">Password</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="password" ng-model="vm.user.password" placeholder="password">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="firstName" class="col-xs-3 form-control-label">First Name</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="firstName" ng-model="vm.user.firstName" placeholder="firstName">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="lastName" class="col-xs-3 form-control-label">Last Name</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="lastName" ng-model="vm.user.lastName" placeholder="lastName">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="role" class="col-xs-3 form-control-label">Role</label>
+      <div class="col-xs-9">
+        <select id="role" class="form-control" ng-model="vm.user.role">
+          <option value="admin">admin</option>
+          <option value="author">author</option>
+          <option value="user">user</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <button class="btn btn-primary" ng-click="vm.deleteUser()">Delete user</button>
+  <button class="btn btn-default" ng-click="vm.back()">Back</button>
+</div>

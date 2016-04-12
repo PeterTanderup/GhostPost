@@ -10,8 +10,18 @@
         controllerAs: 'vm'
       })
       .when('/users', {
-        templateUrl : 'app/users/users.view.html',
+        templateUrl : 'app/users/users.home.view.html',
         controller: 'usersCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/users/user/:id', {
+        templateUrl : 'app/users/users.AddOrUpdate.view.html',
+        controller: 'addOrUpdateCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/users/delete/:id', {
+        templateUrl : 'app/users/users.delete.view.html',
+        controller: 'deleteCtrl',
         controllerAs: 'vm'
       })
       .otherwise({redirectTo: '/'});
