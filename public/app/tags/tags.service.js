@@ -5,7 +5,7 @@
       .factory('tagsService', tagsService);
     
     function tagsService($http, $resource) {
-        var tag = $resource('/app/tags/:id', {id: '@_id'}, {'update': {method: 'PUT'}});
+        var tag = $resource('/api/tags/:id', {id: '@_id'}, {'update': {method: 'PUT'}});
         
         var getTag = function (id) {
             return tag.get({id: id}).$promise;

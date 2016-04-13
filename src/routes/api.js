@@ -2,7 +2,7 @@ var express = require('express');
 var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-var Tag = mongoose.model('Tag');
+var Tag = mongoose.model('Tags');
 
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
@@ -131,12 +131,12 @@ var router = function (nav) {
   apiRouter.route('/tags')
     // get all tags
     .get(function (req, res) {
-      Tag.find(function (err, tag) {
+      Tag.find(function (err, tags) {
           if (err) {
               sendJsonResponse(res, 400, err);
           }
           else {
-              sendJsonResponse(res, 200, tag);
+              sendJsonResponse(res, 200, tags);
           }
       });  
     })
@@ -157,7 +157,7 @@ var router = function (nav) {
     // get one tag
     .get(function (req, res) {
       if (req.params && req.params.tagid) {
-          Tag
+          Tags
             .findById(req.params.tagsid)
             .exec(function (err, tag) {
               if (!tag) {
