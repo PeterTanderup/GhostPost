@@ -8,7 +8,7 @@ var sendJsonResponse = function (res, status, content) {
   res.json(content);
 };
 
-var router = function () {
+var router = function (nav) {
   authRouter.route('/signUp')
     .post(function (req, res) {
       var newUser = {
@@ -25,17 +25,32 @@ var router = function () {
       // a user eexist with that email message
       User.findOne({email: newUser.email}, function (err, user) {
         if (err) {
-          sendJsonResponse(res, 400, err);
-          return;
-        } else if (user) {
-          sendJsonResponse(res, 404, {
-            'message': 'a user with that email exists'
+          //sendJsonResponse(res, 400, err);
+          //return;
+          res.render('login', {
+            title: 'Login to GhostPost',
+            nav: nav,
+            message: err.name
           });
-          return;
+        } else if (user) {
+          //sendJsonResponse(res, 404, {
+          //  'message': 'a user with that email exists'
+          //});
+          //return;
+          res.render('login', {
+            title: 'Login to GhostPost',
+            nav: nav,
+            message: 'a user with that email exists'
+          });
         } else {
           User.create(newUser, function (err, user) {
             if (err) {
-              sendJsonResponse(res, 400, err);
+              //sendJsonResponse(res, 400, err);
+              res.render('login', {
+                title: 'Login to GhostPost',
+                nav: nav,
+                message: err.name
+              });
             }
             else {
               //sendJsonResponse(res, 201, user);

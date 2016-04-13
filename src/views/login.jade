@@ -17,6 +17,7 @@ block content
         .panel-body
           .row
             .col-lg-12
+              h3(class='text-danger') #{message}
               form#login-form(name="signInForm" action='/auth/signIn', method='post', role='', style='display: block;')
                 .form-group
                   input#username.form-control(type='text', name='userName', tabindex='1', placeholder='Username', value='')
