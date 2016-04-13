@@ -2,6 +2,7 @@ var express = require('express');
 var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
+var Categories = mongoose.model('Categories');
 
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
@@ -130,6 +131,114 @@ var router = function (nav) {
     .get(function () {
       
     });
+
+
+    // Categories
+  apiRouter.route('/categories')
+    // get all categories
+    .get(function (req, res) {
+            Categories.find(function (err, categories) {
+                if (err) {
+                    sendJsonResponse(res, 400, err);
+                }
+                else {
+                    sendJsonResponse(res, 200, categories);
+                }
+            });
+        })
+    // create category
+    .post(function (req, res) {
+            Categories.create({
+                categoryName: req.body.categoryName,
+
+            }, function (err, category) {
+                if (err) {
+                    sendJsonResponse(res, 400, err);
+                }
+                else {
+                    sendJsonResponse(res, 201, category);
+                }
+            });
+        });
+  apiRouter.route('/categories/:catid')
+    // get one category
+    .get(function (req, res) {
+            if (req.params && req.params.catid) {
+                Categories
+                    .findById(req.params.catid)
+                    .exec(function (err, category) {
+                        if (!category) {
+                            sendJsonResponse(res, 404, {
+                                'message': 'Category ID not found'
+                            });
+                            return;
+                        }
+                        else if (err) {
+                            sendJsonResponse(res, 400, err);
+                            return;
+                        }
+                        sendJsonResponse(res, 200, category);
+                    });
+            }
+            else {
+                sendJsonResponse(res, 404, {
+                    'message': 'no category ID in request'
+                });
+            }
+        })
+    // update one user
+    .put(function (req, res) {
+            if (req.params && req.params.catid) {
+                Categories
+                    .findById(req.params.catid)
+                    .exec(function (err, category) {
+                        if (!category) {
+                            sendJsonResponse(res, 404, {
+                                'message': 'Category ID not found'
+                            });
+                            return;
+                        }
+                        else if (err) {
+                            sendJsonResponse(res, 400, err);
+                            return;
+                        }
+                        category.categoryName = req.body.categoryName;
+                        category.save(function(err, category){
+                            if (err) {
+                                sendJsonResponse(res, 404, err);
+                            }
+                            else {
+                                sendJsonResponse(res, 200, category);
+                            }
+                        });
+                    });
+            }
+            else {
+                sendJsonResponse(res, 404, {
+                    'message': 'No Category ID in request'
+                });
+            }
+        })
+    // delete one user
+    .delete(function (req, res) {
+            if (req.params && req.params.catid) {
+                Categories
+                    .findByIdAndRemove(req.params.catid)
+                    .exec(function (err, category) {
+                        if (err) {
+                            sendJsonResponse(res, 404, err);
+                            return;
+                        }
+                        sendJsonResponse(res, 204, null);
+                    });
+            }
+            else {
+                sendJsonResponse(res, 404, {
+                    'message': 'No Category ID in request'
+                });
+            }
+        });
+
   return apiRouter;
 };
 

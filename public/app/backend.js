@@ -24,6 +24,21 @@
         controller: 'deleteCtrl',
         controllerAs: 'vm'
       })
+      .when('/categories', {
+        templateUrl: 'app/categories/categories.home.view.html',
+        controller: 'categoriesCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/categories/category/:id', {
+        templateUrl: 'app/categories/categories.AddOrUpdate.view.html',
+        controller: 'addOrUpdateCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/categories/delete/:id', {
+        templateUrl : 'app/categories/categories.delete.view.html',
+        controller: 'deleteCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({redirectTo: '/'});
   }
 

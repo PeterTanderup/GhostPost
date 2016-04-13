@@ -1,0 +1,22 @@
+<h2>{{vm.message}}</h2>
+<p><button class="btn btn-primary" ng-click="vm.addCategory()">Add Category</button></p>
+<input type="text" class="form-control" ng-model="searchCat">
+<table class="table table-bordered">
+
+    <head>
+        <tr>
+            <td>Category</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </head>
+
+
+    <body>
+    <tr ng-repeat="category in vm.categories | filter:searchCat">
+        <td>{{category.categoryName}}</td>
+        <td><button class="btn btn-success" ng-click="vm.editCategory(category._id)">Edit Category</button></td>
+        <td><button class="btn btn-danger" ng-click="vm.deleteCategory(category._id)">Delete Category</button></td>
+    </tr>
+    </body>
+</table>

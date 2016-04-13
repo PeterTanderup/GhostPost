@@ -1,0 +1,18 @@
+<h2>{{vm.message}}</h2>
+<h3 class="text-danger">{{vm.error}}</h3>
+<div class="row">
+    <form class="col-xs-8">
+        <div class="form-group row">
+            <label for="categoryName" class="col-xs-3 form-control-label">Category Name</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" id="categoryName" ng-model="vm.category.categoryName" placeholder="CategoryName">
+            </div>
+        </div>
+
+
+    </form>
+</div>
+<div class="row">
+    <button class="btn btn-primary" ng-click="vm.saveCategory()">Save Category</button>
+    <button class="btn btn-default" ng-click="vm.back()">Back</button>
+</div>
