@@ -5,7 +5,7 @@
 
   function usersCtrl (usersService, $location) {
     var vm = this;
-    vm.message = 'Managing users';
+    vm.message = 'Manage users';
     usersService.getUsers().then(function (data) {
       vm.users = data;
     });

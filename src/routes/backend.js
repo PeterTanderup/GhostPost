@@ -8,6 +8,12 @@ var navSide = [
   },{
     Link: '#/users',
     Text: 'Users'
+  },{
+    Link: '#/categories',
+    Text: 'Categories NYI'
+  },{
+    Link: '#/tags',
+    Text: 'Tags NYI'
   }
 ];
 
