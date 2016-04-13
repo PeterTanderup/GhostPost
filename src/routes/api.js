@@ -2,6 +2,7 @@ var express = require('express');
 var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
+var Tag = mongoose.model('Tag');
 
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
@@ -126,9 +127,50 @@ var router = function (nav) {
         });
       }
     });
-  apiRouter.route('/tags')
-    .get(function () {
-      
+  
+  apiRouter.route('/tag')
+    // get all tags
+    .get(function (req, res) {
+      if (req.params && req.params.tagid) {
+          Tag
+            .findById(req.params.tagsid)
+            .exec(function (err, tag) {
+              if (!tag) {
+                  sendJsonResponse(res, 404, {
+                      'message': 'tagid not found'
+                  });
+                  return;
+              }
+              else if (err) {
+                  sendJsonResponse(res, 400, err);
+                  return;
+              }
+              sendJsonResponse(res, 200, tag);
+          });
+      }
+      else {
+          sendJsonResponse(res, 404, {
+              'message': 'no tagid in request'
+          });
+      }
+    });
+    .delete(function (req, res)) {
+      if (req.params && req.params.tagid) {
+          Tag
+            .findByIdAndRemove(req.params.tagid)
+            .exec(function (err, tag) {
+              if (err) {
+                sendJsonResponse(res, 404, err);
+                return;
+                }
+                sendJsonResponse(res, 204, null);
+              });
+      }
+      else {
+          sendJsonResponse(res, 404, {
+              'message': 'no tagid in request'
+          });
+      }
     });
   return apiRouter;
 };
