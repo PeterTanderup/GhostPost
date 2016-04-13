@@ -24,6 +24,16 @@
         controller: 'deleteCtrl',
         controllerAs: 'vm'
       })
+      .when('/tags', {
+        templateUrl : 'app/tags/tags.home.view.html',
+        controller: 'tagsCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/tags/tag/:id', {
+        templateUrl : 'app/tags/tags.AddTag.view.html',
+        controller: 'addTagCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({redirectTo: '/'});
   }
 

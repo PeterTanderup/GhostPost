@@ -13,7 +13,7 @@ var navSide = [
     Text: 'Categories NYI'
   },{
     Link: '#/tags',
-    Text: 'Tags NYI'
+    Text: 'Tags'
   }
 ];
 
