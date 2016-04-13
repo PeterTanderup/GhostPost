@@ -1,0 +1,42 @@
+<h2>Add your tags</h2>
+<h3 class="text-danger">{{vm.error}}</h3>
+<div class="row">
+  <form class="col-xs-8">
+    <div class="form-group row">
+      <label for="tagName" class="col-xs-3 form-control-label">Tag name</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="tagName" ng-model="vm.tag.tagName" placeholder="Tag name">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <button class="btn btn-primary" ng-click="vm.saveTag()">Add tag</button>
+</div>
+
+<h2>{{vm.message}}</h2>
+
+<input type="text" class="form-control" >
+<table class="table table-bordered">
+
+    <head>
+        <tr>
+          <td>Tag name</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+    </head>
+
+
+    <body>
+        <tr ng-repeat="tag in vm.tags | filter:searchTag">
+          <td>{{tag.tagName}}</td>
+          <td></td>
+          <td></td>
+          <td><button class="btn btn-success" ng-click="vm.editTag(tag._id)">Edit tag</button></td>
+          <td><button class="btn btn-danger" ng-click="vm.deleteTag(tag._id)">Delete tag</button></td>
+        </tr>
+    </body>
+</table>

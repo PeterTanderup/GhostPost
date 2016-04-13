@@ -128,7 +128,7 @@ var router = function (nav) {
       }
     });
   
-  apiRouter.route('/tag')
+  apiRouter.route('/tags')
     // get all tags
     .get(function (req, res) {
       Tag.find(function (err, tag) {
@@ -152,8 +152,7 @@ var router = function (nav) {
               sendJsonResponse(res, 201, tag);
           }
       });    
-    });
-    
+    }); 
   apiRouter.route('/tag:tagid')
     // get one tag
     .get(function (req, res) {
