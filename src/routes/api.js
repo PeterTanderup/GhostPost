@@ -14,6 +14,7 @@ var sendJsonResponse = function (res, status, content) {
 
 var router = function (nav) {
   apiRouter.route('/users')
+    // get all users
     .get(function (req, res) {
       User.find(function (err, users) {
         if (err) {
@@ -24,6 +25,7 @@ var router = function (nav) {
         }
       });
     })
+    // create user
     .post(function (req, res) {
       User.create({
         userName: req.body.userName,
@@ -42,6 +44,7 @@ var router = function (nav) {
       });
     });
   apiRouter.route('/users/:userid')
+    // get one user
     .get(function (req, res) {
       if (req.params && req.params.userid) {
         User
@@ -66,6 +69,7 @@ var router = function (nav) {
         });
       }
     })
+    // update one user
     .put(function (req, res) {
       if (req.params && req.params.userid) {
         User
@@ -103,6 +107,7 @@ var router = function (nav) {
         });
       }
     })
+    // delete one user
     .delete(function (req, res) {
       if (req.params && req.params.userid) {
         User
@@ -120,6 +125,10 @@ var router = function (nav) {
           'message': 'no userid in request'
         });
       }
+    });
+  apiRouter.route('/tags')
+    .get(function () {
+      
     });
   return apiRouter;
 };
