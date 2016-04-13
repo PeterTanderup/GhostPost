@@ -7,14 +7,18 @@
     var vm = this;
     if ($routeParams.id === 'new') {
       vm.message = 'Add a new user';
+      vm.user = {};
+      vm.readonly = false;
     } else {
       vm.message = 'Update user';
+      vm.user = {};
+      vm.readonly = true;
       usersService.getUser($routeParams.id)
         .then(function (data) {
           vm.user = data;
         })
         .catch(function (err) {
-          vm.error = err.data.name;
+          vm.error = err.data.name || err.data.message;
         });
     }
 
@@ -28,7 +32,7 @@
           $location.path('/users');
         })
         .catch(function (err) {
-          vm.error = err.data.name;
+          vm.error = err.data.name || err.data.message;
         });
     };
   }

@@ -27,19 +27,36 @@ var router = function (nav) {
     })
     // create user
     .post(function (req, res) {
-      User.create({
+      var newUser = {
         userName: req.body.userName,
         email: req.body.email,
         password: req.body.password,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         role: req.body.role
-      }, function (err, user) {
+      };
+
+      // would like a way to validate the user object input against the shema
+      // and return a validatian message if only the email is input and not just
+      // a user eexist with that email message
+      User.findOne({email: newUser.email}, function (err, user) {
         if (err) {
           sendJsonResponse(res, 400, err);
-        }
-        else {
-          sendJsonResponse(res, 201, user);
+          return;
+        } else if (user) {
+          sendJsonResponse(res, 404, {
+            'message': 'a user with that email exists'
+          });
+          return;
+        } else {
+          User.create(newUser, function (err, user) {
+            if (err) {
+              sendJsonResponse(res, 400, err);
+            }
+            else {
+              sendJsonResponse(res, 201, user);
+            }
+          });
         }
       });
     });
@@ -86,7 +103,7 @@ var router = function (nav) {
               return;
             }
             user.userName = req.body.userName;
-            user.email = req.body.email;
+            //user.email = req.body.email; // can't update email
             user.password = req.body.password;
             user.firstName = req.body.firstName;
             user.lastName = req.body.lastName;
@@ -128,7 +145,7 @@ var router = function (nav) {
     });
   apiRouter.route('/tags')
     .get(function () {
-      
+
     });
   return apiRouter;
 };
