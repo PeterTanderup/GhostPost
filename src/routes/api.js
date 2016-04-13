@@ -131,6 +131,32 @@ var router = function (nav) {
   apiRouter.route('/tag')
     // get all tags
     .get(function (req, res) {
+      Tag.find(function (err, tag) {
+          if (err) {
+              sendJsonResponse(res, 400, err);
+          }
+          else {
+              sendJsonResponse(res, 200, tag);
+          }
+      });  
+    })
+    // create tag
+    .post(function(req, res) {
+      Tag.create({
+          tagName: req.body.tagName
+      }, function (err, tag) {
+          if (err) {
+              sendJsonResponse(res, 400, err);
+          }
+          else {
+              sendJsonResponse(res, 201, tag);
+          }
+      });    
+    });
+    
+  apiRouter.route('/tag:tagid')
+    // get one tag
+    .get(function (req, res) {
       if (req.params && req.params.tagid) {
           Tag
             .findById(req.params.tagsid)
@@ -150,11 +176,12 @@ var router = function (nav) {
       }
       else {
           sendJsonResponse(res, 404, {
-              'message': 'no tagid in request'
+            'message': 'no tagid in request'
           });
       }
-    });
-    .delete(function (req, res)) {
+    })
+    // delete one tag
+    .delete(function (req, res) {
       if (req.params && req.params.tagid) {
           Tag
             .findByIdAndRemove(req.params.tagid)
