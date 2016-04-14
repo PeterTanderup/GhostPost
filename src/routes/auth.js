@@ -77,7 +77,13 @@ var router = function (nav) {
       next();
     })
     .get(function (req, res) {
-      res.json(req.user);
+      res.render('profile', {
+        title: 'Profile',
+        nav: menu.menuLinks(req),
+        user: req.user,
+        disabled: true,
+        message: ''
+      });
     });
   authRouter.route('/logout')
     .get(function (req, res, next) {

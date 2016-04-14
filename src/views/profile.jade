@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .help-block
+  .row
+    form(class="col-xs-6 col-xs-offset-3")
+      .form-group.row
+        label(for="userName" class="col-xs-3 form-control-label") User name
+        .col-xs-9
+          input(type="text" class="form-control" id="userName" placeholder="Username" value="#{user.userName}" disabled="#{disabled}")
+      .form-group.row
+        label(for="email" class="col-xs-3 form-control-label") Email
+        .col-xs-9
+          input(type="email" class="form-control" id="email" placeholder="email" value="#{user.email}" disabled="#{disabled}")
+      .form-group.row
+        label(for="password" class="col-xs-3 form-control-label") Password
+        .col-xs-9
+          input(type="text" class="form-control" id="password" placeholder="password" value="#{user.password}" disabled="#{disabled}")
+      .form-group.row
+        label(for="firstName" class="col-xs-3 form-control-label") First Name
+        .col-xs-9
+          input(type="text" class="form-control" id="firstName" placeholder="firstName" value="#{user.firstName}" disabled="#{disabled}")
+      .form-group.row
+        label(for="lastName" class="col-xs-3 form-control-label") Last Name
+        .col-xs-9
+          input(type="text" class="form-control" id="lastName" placeholder="lastName" value="#{user.lastName}" disabled="#{disabled}")
+      .form-group.row
+        label(for="role" class="col-xs-3 form-control-label") Role
+        .col-xs-9
+          input(type="text" class="form-control" id="role" placeholder="role" value="#{user.role}" disabled="#{disabled}")
