@@ -73,6 +73,7 @@ var router = function (nav) {
     .all(function (req, res, next) {
       if (!req.user) {
         res.redirect('/');
+        return;
       }
       next();
     })

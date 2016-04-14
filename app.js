@@ -7,26 +7,14 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 require('./src/models/db');
+var menu = require('./src/config/helperFunctions')();
 var port = process.env.PORT || 5000;
-var nav = [
-  {
-    Link: '/login',
-    Text: 'Login'
-  },
-  {
-    Link: '/',
-    Text: 'Home'
-  },{
-    Link: '/backend',
-    Text: 'Admin'
-  }
-];
 
 var routes = require('./src/routes/index')();
-var login = require('./src/routes/login')(nav);
-var auth = require('./src/routes/auth')(nav);
-var api = require('./src/routes/api')(nav);
-var backend = require('./src/routes/backend')(nav);
+var login = require('./src/routes/login')();
+var auth = require('./src/routes/auth')();
+var api = require('./src/routes/api')();
+var backend = require('./src/routes/backend')();
 
 var app = express();
 
@@ -65,7 +53,7 @@ app.use(function(err, req, res, next) {
   res.render('error', {
     message: err.message,
     error: err,
-    nav: nav
+    nav: menu.menuLinks(req)
   });
 });
 

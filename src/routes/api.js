@@ -17,6 +17,16 @@ var sendJsonResponse = function (res, status, content) {
 
 var router = function (nav) {
   apiRouter.route('/users')
+    .all(function (req, res, next) {
+      if (!req.user) {
+        res.json({message: 'private api'});
+        return;
+      } else if (req.user.role !== 'admin') {
+        res.json({message: 'private API'});
+        return;
+      }
+      next();
+    })
     // get all users
     .get(function (req, res) {
       User.find(function (err, users) {
@@ -65,7 +75,14 @@ var router = function (nav) {
     });
   apiRouter.route('/users/:userid')
     // get one user
-    .get(function (req, res) {
+    .get(function (req, res, next) {
+      if (!req.user) {
+        res.json({message: 'private api'});
+        return;
+      } else if (req.user.role !== 'admin') {
+        res.json({message: 'private API'});
+        return;
+      }
       if (req.params && req.params.userid) {
         User
           .findById(req.params.userid)
@@ -91,6 +108,13 @@ var router = function (nav) {
     })
     // update one user
     .put(function (req, res) {
+      if (!req.user) {
+        res.json({message: 'private api'});
+        return;
+      } else if (req.user.role !== 'admin') {
+        res.json({message: 'private API'});
+        return;
+      }
       if (req.params && req.params.userid) {
         User
           .findById(req.params.userid)
@@ -129,6 +153,13 @@ var router = function (nav) {
     })
     // delete one user
     .delete(function (req, res) {
+      if (!req.user) {
+        res.json({message: 'private api'});
+        return;
+      } else if (req.user.role !== 'admin') {
+        res.json({message: 'private API'});
+        return;
+      }
       if (req.params && req.params.userid) {
         User
           .findByIdAndRemove(req.params.userid)
@@ -216,7 +247,7 @@ var router = function (nav) {
           'message': 'no tagid in request'
         });
       }
-    });
+  });
 
 
     // Categories
