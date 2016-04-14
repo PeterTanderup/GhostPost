@@ -36,7 +36,8 @@
       })
       .when('/categories/delete/:id', {
         templateUrl: 'app/categories/categories.delete.view.html',
-        controller: 'deleteCtrl',
+        controller: 'catDeleteCtrl',
+        controllerAs: 'vm'
       })
       .when('/tags', {
         templateUrl : 'app/tags/tags.home.view.html',

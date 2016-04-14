@@ -4,9 +4,9 @@
 (function () {
     angular
         .module('backend')
-        .controller('deleteCtrl', deleteCtrl);
+        .controller('catDeleteCtrl', catDeleteCtrl);
 
-    function deleteCtrl (categoriesService, $location, $routeParams) {
+    function catDeleteCtrl (categoriesService, $location, $routeParams) {
         var vm = this;
         vm.message = 'Are you sure you want to delete this category?';
         categoriesService.getCategory($routeParams.id)
