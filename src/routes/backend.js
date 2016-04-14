@@ -2,21 +2,6 @@ var express = require('express');
 var path = require('path');
 var backendRouter = express.Router();
 var menu = require('../config/helperFunctions')();
-var navSide = [
-  {
-    Link: '#/',
-    Text: 'Home'
-  },{
-    Link: '#/users',
-    Text: 'Users'
-  },{
-    Link: '#/categories',
-    Text: 'Categories'
-  },{
-    Link: '#/tags',
-    Text: 'Tags'
-  }
-];
 
 var router = function (nav) {
   backendRouter.route('*')
@@ -30,12 +15,15 @@ var router = function (nav) {
           nav: menu.menuLinks(req)
         });
         return;
+      } else if (req.user && (req.user.role === 'admin' || req.user.role === 'author')) {
+        res.render('backend',{
+          nav: menu.menuLinks(req),
+          navSide: menu.backendLinks()
+        });
+        return;
+      } else {
+        res.redirect('/');
       }
-      res.render('backend',{
-        nav: menu.menuLinks(req),
-        navSide: navSide
-      });
-      //res.sendFile(path.join(__dirname, '../../public/app', 'index.html'));
     });
   return backendRouter;
 };

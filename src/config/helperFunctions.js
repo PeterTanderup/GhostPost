@@ -53,8 +53,33 @@ var helperFunctions = function () {
     }
     return nav;
   };
+  var backendLinks = function (req) {
+    var navSide = [
+      {
+        Link: '#/',
+        Text: 'Home'
+      },{
+        Link: '#/categories',
+        Text: 'Categories'
+      },{
+        Link: '#/tags',
+        Text: 'Tags'
+      }
+    ];
+    if (req.user && req.user.role === 'admin') {
+      navSide.push({
+        Link: '#/users',
+        Text: 'Users'
+      });
+      return navSide;
+    } else if (req.user && req.user.role === 'author') {
+      return navSide;
+    }
+    return [];
+  };
   return {
-    menuLinks: menuLinks
+    menuLinks: menuLinks,
+    backendLinks: backendLinks
   };
 };
 
