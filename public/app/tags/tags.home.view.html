@@ -1,0 +1,22 @@
+
+<h2>{{vm.message}}</h2>
+<p><button class="btn btn-primary" ng-click="vm.addTag()">Add tag</button></p>
+<input type="text" class="form-control" ng-model="searchTag">
+<table class="table table-bordered">
+
+    <head>
+        <tr>
+          <td>Tag name</td>
+          <td></td>
+          <td></td>
+        </tr>
+    </head>
+
+
+    <body>
+        <tr ng-repeat="tag in vm.tags | filter:searchTag">
+          <td>{{tag.tagName}}</td>
+          <td><button class="btn btn-danger" ng-click="vm.deleteTag(tag._id)">Delete tag</button></td>
+        </tr>
+    </body>
+</table>

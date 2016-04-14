@@ -1,0 +1,16 @@
+<h2>{{vm.message}}</h2>
+<h3 class="text-danger">{{vm.error}}</h3>
+<div class="row">
+  <form class="col-xs-8">
+    <div class="form-group row">
+      <label for="tagName" class="col-xs-3 form-control-label">Tag name</label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control" id="tagName" ng-model="vm.tag.tagName" placeholder="=Tag name">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <button class="btn btn-primary" ng-click="vm.saveTag()">Save tag</button>
+  <button class="btn btn-default" ng-click="vm.back()">Back</button>
+</div>
