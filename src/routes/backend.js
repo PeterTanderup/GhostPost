@@ -10,7 +10,7 @@ var navSide = [
     Text: 'Users'
   },{
     Link: '#/categories',
-    Text: 'Categories NYI'
+    Text: 'Categories'
   },{
     Link: '#/tags',
     Text: 'Tags'
@@ -20,7 +20,7 @@ var navSide = [
 var router = function (nav) {
   backendRouter.route('*')
     .get(function(req, res, next) {
-      if (req.user) {
+      if (!req.user) {
         var err = new Error('You need to be logged in');
         err.status = 401;
         res.render('error', {
@@ -28,6 +28,7 @@ var router = function (nav) {
           error: err,
           nav: nav
         });
+        return;
       }
       res.render('backend',{
         nav: nav,
