@@ -22,7 +22,7 @@ var nav = [
   }
 ];
 
-var routes = require('./src/routes/index')(nav);
+var routes = require('./src/routes/index')();
 var login = require('./src/routes/login')(nav);
 var auth = require('./src/routes/auth')(nav);
 var api = require('./src/routes/api')(nav);

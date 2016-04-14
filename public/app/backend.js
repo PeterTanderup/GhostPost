@@ -31,7 +31,7 @@
       })
       .when('/categories/category/:id', {
         templateUrl: 'app/categories/categories.AddOrUpdate.view.html',
-        controller: 'addOrUpdateCtrl',
+        controller: 'catAddOrUpdateCtrl',
         controllerAs: 'vm'
       })
       .when('/categories/delete/:id', {

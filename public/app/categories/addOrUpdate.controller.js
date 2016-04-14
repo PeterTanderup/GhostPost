@@ -4,9 +4,9 @@
 (function () {
     angular
         .module('backend')
-        .controller('addOrUpdateCtrl', addOrUpdateCtrl);
+        .controller('catAddOrUpdateCtrl', catAddOrUpdateCtrl);
 
-    function addOrUpdateCtrl (categoriesService, $location, $routeParams) {
+    function catAddOrUpdateCtrl (categoriesService, $location, $routeParams) {
         var vm = this;
         if ($routeParams.id === 'new') {
             vm.message = 'Add a new category';
