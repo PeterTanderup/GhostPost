@@ -3,6 +3,7 @@ var authRouter = express.Router();
 var passport = require('passport');
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
+var menu = require('../config/helperFunctions')();
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
   res.json(content);
@@ -29,7 +30,7 @@ var router = function (nav) {
           //return;
           res.render('login', {
             title: 'Login to GhostPost',
-            nav: nav,
+            nav: menu.menuLinks(req),
             message: err.name
           });
         } else if (user) {
@@ -39,7 +40,7 @@ var router = function (nav) {
           //return;
           res.render('login', {
             title: 'Login to GhostPost',
-            nav: nav,
+            nav: menu.menuLinks(req),
             message: 'a user with that email exists'
           });
         } else {
@@ -48,7 +49,7 @@ var router = function (nav) {
               //sendJsonResponse(res, 400, err);
               res.render('login', {
                 title: 'Login to GhostPost',
-                nav: nav,
+                nav: menu.menuLinks(req),
                 message: err.name
               });
             }
@@ -77,6 +78,12 @@ var router = function (nav) {
     })
     .get(function (req, res) {
       res.json(req.user);
+    });
+  authRouter.route('/logout')
+    .get(function (req, res, next) {
+      req.logout();
+      req.session.destroy();
+      res.redirect('/');
     });
   return authRouter;
 };

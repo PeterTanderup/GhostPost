@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var backendRouter = express.Router();
+var menu = require('../config/helperFunctions')();
 var navSide = [
   {
     Link: '#/',
@@ -26,12 +27,12 @@ var router = function (nav) {
         res.render('error', {
           message: err.message,
           error: err,
-          nav: nav
+          nav: menu.menuLinks(req)
         });
         return;
       }
       res.render('backend',{
-        nav: nav,
+        nav: menu.menuLinks(req),
         navSide: navSide
       });
       //res.sendFile(path.join(__dirname, '../../public/app', 'index.html'));
