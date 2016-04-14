@@ -6,7 +6,8 @@ var router = function (nav) {
     .get(function(req, res, next) {
       res.render('login', {
         title: 'Login to GhostPost',
-        nav: nav
+        nav: nav,
+        message: ''
       });
     });
   return loginRouter;

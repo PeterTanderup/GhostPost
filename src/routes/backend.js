@@ -20,7 +20,7 @@ var navSide = [
 var router = function (nav) {
   backendRouter.route('*')
     .get(function(req, res, next) {
-      if (!req.user) {
+      if (req.user) {
         var err = new Error('You need to be logged in');
         err.status = 401;
         res.render('error', {

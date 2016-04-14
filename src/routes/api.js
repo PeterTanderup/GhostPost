@@ -2,8 +2,12 @@ var express = require('express');
 var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
+<<<<<<< HEAD
 var Categories = mongoose.model('Categories');
 var Tag = mongoose.model('Tags');
+=======
+var Tag = mongoose.model('Tag');
+>>>>>>> 4208ea710918dcb26f2d48826047539d48eafb00
 
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
@@ -29,19 +33,36 @@ var router = function (nav) {
     })
     // create user
     .post(function (req, res) {
-      User.create({
+      var newUser = {
         userName: req.body.userName,
         email: req.body.email,
         password: req.body.password,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         role: req.body.role
-      }, function (err, user) {
+      };
+
+      // would like a way to validate the user object input against the shema
+      // and return a validatian message if only the email is input and not just
+      // a user eexist with that email message
+      User.findOne({email: newUser.email}, function (err, user) {
         if (err) {
           sendJsonResponse(res, 400, err);
-        }
-        else {
-          sendJsonResponse(res, 201, user);
+          return;
+        } else if (user) {
+          sendJsonResponse(res, 404, {
+            'message': 'a user with that email exists'
+          });
+          return;
+        } else {
+          User.create(newUser, function (err, user) {
+            if (err) {
+              sendJsonResponse(res, 400, err);
+            }
+            else {
+              sendJsonResponse(res, 201, user);
+            }
+          });
         }
       });
     });
@@ -88,7 +109,7 @@ var router = function (nav) {
               return;
             }
             user.userName = req.body.userName;
-            user.email = req.body.email;
+            //user.email = req.body.email; // can't update email
             user.password = req.body.password;
             user.firstName = req.body.firstName;
             user.lastName = req.body.lastName;
@@ -128,75 +149,75 @@ var router = function (nav) {
         });
       }
     });
-  
+
   apiRouter.route('/tags')
     // get all tags
     .get(function (req, res) {
       Tag.find(function (err, tags) {
-          if (err) {
-              sendJsonResponse(res, 400, err);
-          }
-          else {
-              sendJsonResponse(res, 200, tags);
-          }
-      });  
+        if (err) {
+          sendJsonResponse(res, 400, err);
+        }
+        else {
+          sendJsonResponse(res, 200, tags);
+        }
+      });
     })
     // create tag
     .post(function(req, res) {
       Tag.create({
-          tagName: req.body.tagName
+        tagName: req.body.tagName
       }, function (err, tag) {
-          if (err) {
-              sendJsonResponse(res, 400, err);
-          }
-          else {
-              sendJsonResponse(res, 201, tag);
-          }
-      });    
-    }); 
+        if (err) {
+          sendJsonResponse(res, 400, err);
+        }
+        else {
+          sendJsonResponse(res, 201, tag);
+        }
+      });
+    });
   apiRouter.route('/tag:tagid')
     // get one tag
     .get(function (req, res) {
       if (req.params && req.params.tagid) {
-          Tags
-            .findById(req.params.tagsid)
-            .exec(function (err, tag) {
-              if (!tag) {
-                  sendJsonResponse(res, 404, {
-                      'message': 'tagid not found'
-                  });
-                  return;
-              }
-              else if (err) {
-                  sendJsonResponse(res, 400, err);
-                  return;
-              }
-              sendJsonResponse(res, 200, tag);
+        Tag
+          .findById(req.params.tagsid)
+          .exec(function (err, tag) {
+            if (!tag) {
+              sendJsonResponse(res, 404, {
+                'message': 'tagid not found'
+              });
+              return;
+            }
+            else if (err) {
+              sendJsonResponse(res, 400, err);
+              return;
+            }
+            sendJsonResponse(res, 200, tag);
           });
       }
       else {
-          sendJsonResponse(res, 404, {
-            'message': 'no tagid in request'
-          });
+        sendJsonResponse(res, 404, {
+          'message': 'no tagid in request'
+        });
       }
     })
     // delete one tag
     .delete(function (req, res) {
       if (req.params && req.params.tagid) {
-          Tag
-            .findByIdAndRemove(req.params.tagid)
-            .exec(function (err, tag) {
-              if (err) {
-                sendJsonResponse(res, 404, err);
-                return;
-                }
-                sendJsonResponse(res, 204, null);
-              });
+        Tag
+          .findByIdAndRemove(req.params.tagid)
+          .exec(function (err, tag) {
+            if (err) {
+              sendJsonResponse(res, 404, err);
+              return;
+            }
+            sendJsonResponse(res, 204, null);
+          });
       }
       else {
-          sendJsonResponse(res, 404, {
-              'message': 'no tagid in request'
-          });
+        sendJsonResponse(res, 404, {
+          'message': 'no tagid in request'
+        });
       }
     });
 
