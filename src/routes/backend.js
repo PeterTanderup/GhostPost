@@ -18,7 +18,7 @@ var router = function (nav) {
       } else if (req.user && (req.user.role === 'admin' || req.user.role === 'author')) {
         res.render('backend',{
           nav: menu.menuLinks(req),
-          navSide: menu.backendLinks()
+          navSide: menu.backendLinks(req)
         });
         return;
       } else {

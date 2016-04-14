@@ -8,7 +8,6 @@
     var user = $resource('/api/users/:id', {id: '@_id'}, {'update': {method: 'PUT'}});
 
     var getUser = function (id) {
-      console.log(user);
       return user.get({id: id}).$promise;
     };
 
