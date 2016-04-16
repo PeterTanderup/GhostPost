@@ -233,7 +233,7 @@ var router = function (nav) {
     .delete(function (req, res) {
       if (req.params && req.params.tagid) {
         Tag
-          .findByIdAndRemove(req.params.tagid)
+          .findByIdAndRemove(req.params.tagsid)
           .exec(function (err, tag) {
             if (err) {
               sendJsonResponse(res, 404, err);

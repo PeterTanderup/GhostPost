@@ -49,6 +49,11 @@
         controller: 'addTagCtrl',
         controllerAs: 'vm'
       })
+      .when('/tags/delete/:id', {
+        templateUrl : 'app/tags/tags.deleteTag.view.html',
+        controller: 'deleteTagCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({redirectTo: '/'});
   }
 
