@@ -42,5 +42,5 @@ process.on('SIGTERM', function () {
   });
 });
 require('./users');
-require('./categories');
+require('./category');
 require('./tags');
