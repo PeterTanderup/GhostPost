@@ -204,7 +204,7 @@ var router = function (nav) {
         }
       });
     });
-  apiRouter.route('/tags:tagid')
+  apiRouter.route('/tags/:tagid')
     // get one tag
     .get(function (req, res) {
       if (req.params && req.params.tagid) {
