@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d351c6c2-3643-4a9a-b4dc-c158192932f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/categories/categories.delete.view.html" afterPath="$PROJECT_DIR$/public/app/categories/categories.delete.view.html" />
-    </list>
+    <list default="true" id="d351c6c2-3643-4a9a-b4dc-c158192932f7" name="Default" comment="" />
     <ignored path="GhostPost.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,28 +31,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categories.delete.view.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="categories.delete.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/categories/categories.delete.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20698924">
+            <state vertical-scroll-proportion="-5.5">
               <caret line="7" column="104" selection-start-line="7" selection-start-column="104" selection-end-line="7" selection-end-column="104" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categories.home.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/categories/categories.home.view.html">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.571428">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tags.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/tags.js">
+      <file leaf-file-name="deleteTag.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/tags/deleteTag.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -63,80 +61,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/db.js">
+      <file leaf-file-name="tags.deleteTag.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/tags/tags.deleteTag.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/api.js">
+      <file leaf-file-name="tags.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/tags/tags.service.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-              <folding>
-                <marker date="1461040014219" expanded="true" signature="311:357" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="359:400" placeholder="//..." />
-                <marker date="1461040014219" expanded="true" signature="445:10466" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="6716:6719" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="6830:7113" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="6887:7101" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="6914:6986" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7008:7087" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7168:7520" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7200:7269" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7296:7508" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7323:7395" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7417:7494" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7616:8484" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7666:8317" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7794:8301" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7835:8054" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="7892:7990" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-                <marker date="1461040014219" expanded="true" signature="8093:8217" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="8335:8474" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="8380:8458" placeholder="{&quot;message&quot;: 'no category ID in request'...}" />
-                <marker date="1461040014219" expanded="true" signature="8538:9775" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="8588:9608" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="8716:9592" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="8757:8976" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="8814:8912" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-                <marker date="1461040014219" expanded="true" signature="9015:9139" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="9272:9568" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="9311:9407" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="9441:9542" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="9626:9765" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="9671:9749" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
-                <marker date="1461040014219" expanded="true" signature="9832:10441" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="9882:10274" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="10019:10258" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="10054:10178" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="10292:10431" placeholder="{...}" />
-                <marker date="1461040014219" expanded="true" signature="10337:10415" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backend.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/backend.jade">
+      <file leaf-file-name="addTag.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/tags/addTag.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <marker date="1461040014237" expanded="true" signature="21:76" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="82:332" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="103:332" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="130:332" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="146:295" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="157:295" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="311:332" placeholder="..." />
-                <marker date="1461040014237" expanded="true" signature="338:1120" placeholder="..." />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addOrUpdate.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/categories/addOrUpdate.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="categories.home.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/categories/categories.home.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tags.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/models/tags.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,7 +197,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -452,6 +431,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,7 +506,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3856" height="2092" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24986751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -592,44 +572,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
           <folding>
-            <marker date="1461040014219" expanded="true" signature="311:357" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="359:400" placeholder="//..." />
-            <marker date="1461040014219" expanded="true" signature="445:10466" placeholder="{...}" />
             <marker date="1461040014219" expanded="true" signature="6716:6719" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6830:7113" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6887:7101" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6914:6986" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7008:7087" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7168:7520" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7200:7269" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7296:7508" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7323:7395" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7417:7494" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7616:8484" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7666:8317" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7794:8301" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7835:8054" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7892:7990" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="8093:8217" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8335:8474" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8380:8458" placeholder="{&quot;message&quot;: 'no category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="8538:9775" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8588:9608" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8716:9592" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8757:8976" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8814:8912" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="9015:9139" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9272:9568" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9311:9407" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9441:9542" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9626:9765" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9671:9749" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="9832:10441" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9882:10274" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10019:10258" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10054:10178" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10292:10431" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10337:10415" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
           </folding>
         </state>
       </provider>
@@ -639,13 +582,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1461040014237" expanded="true" signature="21:76" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="82:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="103:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="130:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="146:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="157:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="311:332" placeholder="..." />
             <marker date="1461040014237" expanded="true" signature="338:1120" placeholder="..." />
           </folding>
         </state>
@@ -680,44 +616,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1461040014219" expanded="true" signature="311:357" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="359:400" placeholder="//..." />
-            <marker date="1461040014219" expanded="true" signature="445:10466" placeholder="{...}" />
             <marker date="1461040014219" expanded="true" signature="6716:6719" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6830:7113" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6887:7101" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6914:6986" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7008:7087" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7168:7520" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7200:7269" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7296:7508" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7323:7395" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7417:7494" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7616:8484" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7666:8317" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7794:8301" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7835:8054" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7892:7990" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="8093:8217" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8335:8474" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8380:8458" placeholder="{&quot;message&quot;: 'no category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="8538:9775" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8588:9608" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8716:9592" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8757:8976" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8814:8912" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="9015:9139" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9272:9568" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9311:9407" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9441:9542" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9626:9765" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9671:9749" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="9832:10441" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9882:10274" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10019:10258" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10054:10178" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10292:10431" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10337:10415" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
           </folding>
         </state>
       </provider>
@@ -727,13 +626,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1461040014237" expanded="true" signature="21:76" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="82:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="103:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="130:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="146:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="157:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="311:332" placeholder="..." />
             <marker date="1461040014237" expanded="true" signature="338:1120" placeholder="..." />
           </folding>
         </state>
@@ -760,44 +652,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <marker date="1461040014219" expanded="true" signature="311:357" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="359:400" placeholder="//..." />
-            <marker date="1461040014219" expanded="true" signature="445:10466" placeholder="{...}" />
             <marker date="1461040014219" expanded="true" signature="6716:6719" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6830:7113" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6887:7101" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6914:6986" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7008:7087" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7168:7520" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7200:7269" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7296:7508" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7323:7395" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7417:7494" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7616:8484" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7666:8317" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7794:8301" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7835:8054" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7892:7990" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="8093:8217" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8335:8474" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8380:8458" placeholder="{&quot;message&quot;: 'no category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="8538:9775" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8588:9608" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8716:9592" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8757:8976" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8814:8912" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="9015:9139" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9272:9568" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9311:9407" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9441:9542" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9626:9765" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9671:9749" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="9832:10441" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9882:10274" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10019:10258" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10054:10178" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10292:10431" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10337:10415" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
           </folding>
         </state>
       </provider>
@@ -807,13 +662,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1461040014237" expanded="true" signature="21:76" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="82:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="103:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="130:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="146:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="157:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="311:332" placeholder="..." />
             <marker date="1461040014237" expanded="true" signature="338:1120" placeholder="..." />
           </folding>
         </state>
@@ -952,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/categories/addOrUpdate.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5414508">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/categories/categories.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25647667">
@@ -994,35 +835,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2797928">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/backend.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1461040014237" expanded="true" signature="21:76" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="82:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="103:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="130:332" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="146:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="157:295" placeholder="..." />
-            <marker date="1461040014237" expanded="true" signature="311:332" placeholder="..." />
             <marker date="1461040014237" expanded="true" signature="338:1120" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/tags.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,44 +850,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
           <folding>
-            <marker date="1461040014219" expanded="true" signature="311:357" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="359:400" placeholder="//..." />
-            <marker date="1461040014219" expanded="true" signature="445:10466" placeholder="{...}" />
             <marker date="1461040014219" expanded="true" signature="6716:6719" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6830:7113" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6887:7101" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="6914:6986" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7008:7087" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7168:7520" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7200:7269" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7296:7508" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7323:7395" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7417:7494" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7616:8484" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7666:8317" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7794:8301" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7835:8054" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="7892:7990" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="8093:8217" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8335:8474" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8380:8458" placeholder="{&quot;message&quot;: 'no category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="8538:9775" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8588:9608" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8716:9592" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8757:8976" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="8814:8912" placeholder="{&quot;message&quot;: 'Category ID not found'...}" />
-            <marker date="1461040014219" expanded="true" signature="9015:9139" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9272:9568" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9311:9407" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9441:9542" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9626:9765" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9671:9749" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
-            <marker date="1461040014219" expanded="true" signature="9832:10441" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="9882:10274" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10019:10258" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10054:10178" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10292:10431" placeholder="{...}" />
-            <marker date="1461040014219" expanded="true" signature="10337:10415" placeholder="{&quot;message&quot;: 'No Category ID in request'...}" />
           </folding>
         </state>
       </provider>
@@ -1091,7 +873,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/categories/categories.home.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.571428">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="35" />
           <folding />
         </state>
@@ -1099,8 +881,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/categories/categories.delete.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20698924">
+        <state vertical-scroll-proportion="-5.5">
           <caret line="7" column="104" selection-start-line="7" selection-start-column="104" selection-end-line="7" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/tags/tags.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/tags/addTag.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/categories/addOrUpdate.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/tags/tags.deleteTag.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/tags/deleteTag.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/tags.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
