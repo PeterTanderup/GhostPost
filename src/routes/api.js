@@ -3,7 +3,6 @@ var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
 var Categories = mongoose.model('Categories');
-//var Tag = mongoose.model('Tags');
 var Tag = mongoose.model('Tag');
 
 var sendJsonResponse = function (res, status, content) {
@@ -203,7 +202,7 @@ var router = function (nav) {
         }
       });
     });
-  apiRouter.route('/tag:tagid')
+  apiRouter.route('/tags/:tagid')
     // get one tag
     .get(function (req, res) {
       if (req.params && req.params.tagid) {
@@ -233,7 +232,7 @@ var router = function (nav) {
     .delete(function (req, res) {
       if (req.params && req.params.tagid) {
         Tag
-          .findByIdAndRemove(req.params.tagsid)
+          .findByIdAndRemove(req.params.tagid)
           .exec(function (err, tag) {
             if (err) {
               sendJsonResponse(res, 404, err);
