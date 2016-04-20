@@ -12,7 +12,11 @@ var contentSchema = new mongoose.Schema({
     type : mongoose.Schema.Types.ObjectId,
     ref: 'tag',
     required: true
-  }]
+  }],
+  created: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 mongoose.model('Content', contentSchema);
