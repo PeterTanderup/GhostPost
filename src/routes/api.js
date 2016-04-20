@@ -2,7 +2,7 @@ var express = require('express');
 var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-var Categories = mongoose.model('Categories');
+var Category = mongoose.model('Category');
 //var Tag = mongoose.model('Tags');
 var Tag = mongoose.model('Tag');
 
@@ -254,7 +254,7 @@ var router = function (nav) {
   apiRouter.route('/categories')
     // get all categories
     .get(function (req, res) {
-            Categories.find(function (err, categories) {
+            Category.find(function (err, categories) {
                 if (err) {
                     sendJsonResponse(res, 400, err);
                 }
@@ -265,7 +265,7 @@ var router = function (nav) {
         })
     // create category
     .post(function (req, res) {
-            Categories.create({
+            Category.create({
                 categoryName: req.body.categoryName,
 
             }, function (err, category) {
@@ -281,7 +281,7 @@ var router = function (nav) {
     // get one category
     .get(function (req, res) {
             if (req.params && req.params.catid) {
-                Categories
+                Category
                     .findById(req.params.catid)
                     .exec(function (err, category) {
                         if (!category) {
@@ -306,7 +306,7 @@ var router = function (nav) {
     // update one user
     .put(function (req, res) {
             if (req.params && req.params.catid) {
-                Categories
+                Category
                     .findById(req.params.catid)
                     .exec(function (err, category) {
                         if (!category) {
@@ -339,7 +339,7 @@ var router = function (nav) {
     // delete one user
     .delete(function (req, res) {
             if (req.params && req.params.catid) {
-                Categories
+                Category
                     .findByIdAndRemove(req.params.catid)
                     .exec(function (err, category) {
                         if (err) {

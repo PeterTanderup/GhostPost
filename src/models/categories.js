@@ -7,4 +7,4 @@ var cateSchema = new mongoose.Schema({
     categoryName: {type: String, require: true}
 });
 
-mongoose.model('Categories', cateSchema);
+mongoose.model('Category', cateSchema);
