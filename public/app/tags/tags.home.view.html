@@ -16,6 +16,7 @@
     <body>
         <tr ng-repeat="tag in vm.tags | filter:searchTag">
           <td>{{tag.tagName}}</td>
+          <td><button class="btn btn-success" ng-click="vm.editTag(tag._id)">Edit Tag</button></td>
           <td><button class="btn btn-danger" ng-click="vm.deleteTag(tag._id)">Delete tag</button></td>
         </tr>
     </body>
