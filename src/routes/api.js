@@ -40,6 +40,7 @@ var router = function (nav) {
     })
     // create user
     .post(function (req, res) {
+      console.log(req.body);
       var newUser = {
         userName: req.body.userName,
         email: req.body.email,

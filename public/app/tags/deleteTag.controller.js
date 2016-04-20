@@ -6,7 +6,8 @@
   function deleteTagCtrl (tagsService, $location, $routeParams) {
     var vm = this;
     vm.message = 'Are you sure you want to delete this tag?';
-    tagsService.getTags($routeParams.id)
+    console.log($routeParams.id);
+    tagsService.getTag($routeParams.id)
         .then(function (data) {
           vm.tag = data;
         })
