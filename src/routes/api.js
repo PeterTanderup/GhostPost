@@ -40,6 +40,7 @@ var router = function (nav) {
     })
     // create user
     .post(function (req, res) {
+      console.log(req.body);
       var newUser = {
         userName: req.body.userName,
         email: req.body.email,
@@ -203,12 +204,12 @@ var router = function (nav) {
         }
       });
     });
-  apiRouter.route('/tag:tagid')
+  apiRouter.route('/tags/:tagid')
     // get one tag
     .get(function (req, res) {
       if (req.params && req.params.tagid) {
         Tag
-          .findById(req.params.tagsid)
+          .findById(req.params.tagid)
           .exec(function (err, tag) {
             if (!tag) {
               sendJsonResponse(res, 404, {
@@ -233,7 +234,7 @@ var router = function (nav) {
     .delete(function (req, res) {
       if (req.params && req.params.tagid) {
         Tag
-          .findByIdAndRemove(req.params.tagsid)
+          .findByIdAndRemove(req.params.tagid)
           .exec(function (err, tag) {
             if (err) {
               sendJsonResponse(res, 404, err);
