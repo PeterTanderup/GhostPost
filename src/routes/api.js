@@ -2,14 +2,8 @@ var express = require('express');
 var apiRouter = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-<<<<<<< HEAD
-var Categories = mongoose.model('Categories');
-=======
 var Category = mongoose.model('Category');
-//var Tag = mongoose.model('Tags');
->>>>>>> 2a57c726ae3e0cf1603a91fbafdd258e191a9d16
 var Tag = mongoose.model('Tag');
-
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
   res.json(content);

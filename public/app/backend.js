@@ -45,8 +45,8 @@
         controllerAs: 'vm'
       })
       .when('/tags/tag/:id', {
-        templateUrl : 'app/tags/tags.AddTag.view.html',
-        controller: 'addTagCtrl',
+        templateUrl : 'app/tags/tags.AddOrUpdate.view.html',
+        controller: 'tagAddOrUpdateCtrl',
         controllerAs: 'vm'
       })
       .when('/tags/delete/:id', {
