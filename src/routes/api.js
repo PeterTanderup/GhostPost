@@ -228,6 +228,40 @@ var router = function (nav) {
         });
       }
     })
+  
+  // update one category
+    .put(function (req, res) {
+            if (req.params && req.params.tagid) {
+                Tag
+                    .findById(req.params.tagid)
+                    .exec(function (err, tag) {
+                        if (!tag) {
+                            sendJsonResponse(res, 404, {
+                                'message': 'Tag ID not found'
+                            });
+                            return;
+                        }
+                        else if (err) {
+                            sendJsonResponse(res, 400, err);
+                            return;
+                        }
+                        tag.tagName = req.body.tagName;
+                        tag.save(function(err, tag){
+                            if (err) {
+                                sendJsonResponse(res, 404, err);
+                            }
+                            else {
+                                sendJsonResponse(res, 200, tag);
+                            }
+                        });
+                    });
+            }
+            else {
+                sendJsonResponse(res, 404, {
+                    'message': 'No tag ID in request'
+                });
+            }
+        })
     // delete one tag
     .delete(function (req, res) {
       if (req.params && req.params.tagid) {
@@ -302,7 +336,7 @@ var router = function (nav) {
                 });
             }
         })
-    // update one user
+    // update one category
     .put(function (req, res) {
             if (req.params && req.params.catid) {
                 Category
@@ -335,7 +369,7 @@ var router = function (nav) {
                 });
             }
         })
-    // delete one user
+    // delete one category
     .delete(function (req, res) {
             if (req.params && req.params.catid) {
                 Category
