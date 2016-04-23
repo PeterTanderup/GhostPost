@@ -5,7 +5,8 @@
     'use strict';
     angular
       .module('backend')
-      .factory('tagsService', tagsService);
+      .factory('tagsService', 
+      tagsService);
     
     function tagsService($http, $resource) {
         var tag = $resource('/api/tags/:id', {id: '@_id'}, {'update': {method: 'PUT'}});
