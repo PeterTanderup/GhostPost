@@ -10,11 +10,9 @@
     var getUser = function (id) {
       return user.get({id: id}).$promise;
     };
-
     var getUsers = function () {
       return user.query().$promise;
     };
-
     var saveUser = function (userData) {
       if (!userData._id) {
         return user.save(userData).$promise;
@@ -22,7 +20,6 @@
         return user.update({id: userData._id}, userData).$promise;
       }
     };
-
     var deleteUser = function (id) {
       return user.remove({id: id}).$promise;
     };

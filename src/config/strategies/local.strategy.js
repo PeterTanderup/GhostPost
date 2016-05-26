@@ -6,7 +6,6 @@ var passport = require('passport'),
       res.status(status);
       res.json(content);
     };
-
 module.exports = function () {
   passport.use(new LocalStrategy({
     usernameField: 'userName',
