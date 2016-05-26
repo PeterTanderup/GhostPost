@@ -17,7 +17,7 @@ var api = require('./src/routes/api')();
 var backend = require('./src/routes/backend')();
 
 var app = express();
-
+//For GIT PURPOSE
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'jade');
